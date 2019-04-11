@@ -1,0 +1,6 @@
+framework module MOIMLib {
+  umbrella header "MOIMLib.h"
+
+  export *
+  module * { export * }
+}

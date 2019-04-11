@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07284AFC532CFD7E4EA4FA58 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		07284AFC532CFD7E4EA4FA58 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		31F7D7A89F457A3E7AE8007E /* Pods-MOIM_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIM_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MOIM_Example/Pods-MOIM_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4BF42FE25E9414BE38B9459C /* Pods-MOIM_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIM_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MOIM_Tests/Pods-MOIM_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		559E97F63BDDC50FA187DFCE /* Pods_MOIM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOIM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +63,8 @@
 		70DBD8AF4C1431E0CCBAD544 /* Pods-MOIM_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIM_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MOIM_Example/Pods-MOIM_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		918F3C3B6543C008B139E6E2 /* MOIM.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MOIM.podspec; path = ../MOIM.podspec; sourceTree = "<group>"; };
-		A3DF5A3F79044264F45EA771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		918F3C3B6543C008B139E6E2 /* MOIM.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MOIM.podspec; path = ../MOIM.podspec; sourceTree = "<group>"; };
+		A3DF5A3F79044264F45EA771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C2369C8037A566D4CCE3021A /* Pods-MOIM_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIM_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MOIM_Tests/Pods-MOIM_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2526CB46353E85FDA70323 /* Pods_MOIM_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOIM_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -320,10 +321,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MOIM_Example/Pods-MOIM_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MOIM/MOIM.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOIM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,6 +493,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MOIM/MOIM-Prefix.pch";
 				INFOPLIST_FILE = "MOIM/MOIM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +509,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MOIM/MOIM-Prefix.pch";
 				INFOPLIST_FILE = "MOIM/MOIM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
