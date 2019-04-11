@@ -1,6 +1,6 @@
 {
   "name": "MOIM",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "A short description of MOIM.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://yangjunpeng.com",
@@ -13,12 +13,14 @@
   },
   "source": {
     "git": "https://github.com/yangjunpeng1993/MOIM.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "MOIM/Classes/**/*",
+  "swift_version": "5.0",
+  "source_files": "MOIM/Classes/**/*.{h,m}",
+  "vendored_frameworks": "MOIM/Classes/*.framework",
   "dependencies": {
     "Socket.IO-Client-Swift": [
       "~> 15.0.0"

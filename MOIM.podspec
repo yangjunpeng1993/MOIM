@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MOIM'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A short description of MOIM.'
 
 # This description is used to generate tags and improve search results.
@@ -29,8 +29,9 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
-
-  s.source_files = 'MOIM/Classes/**/*'
+  s.swift_version = '5.0'
+  s.source_files = 'MOIM/Classes/**/*.{h,m}'
+  s.vendored_frameworks = 'MOIM/Classes/*.framework'
   
   # s.resource_bundles = {
   #   'MOIM' => ['MOIM/Assets/*.png']
